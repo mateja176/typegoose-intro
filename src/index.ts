@@ -17,9 +17,10 @@ const UserModel = new User().getModelForClass(User);
 // * UserModel is a regular Mongoose Model with correct types
 
 (async () => {
-  const u = await UserModel.create({ name: 'Jane Doe' });
-  console.log(u);
-  const user = await UserModel.findOne();
+  const userStream = UserModel.watch();
+  userStream.on('data', data => {
+    console.log('user stream:', data);
+  });
 
   // TODO strong-type creation param
   const user = await UserModel.create({ name: 'Jim Doe' });
