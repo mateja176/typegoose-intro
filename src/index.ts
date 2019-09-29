@@ -27,6 +27,7 @@ const UserModel = new User().getModelForClass(User);
   const user = await UserModel.create({ name: 'Jake Doe' });
   console.log('created user:', user);
 
+  userStream.close();
   // * close connection
   mongoose.connection.close();
 })();
