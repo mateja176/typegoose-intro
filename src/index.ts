@@ -18,12 +18,13 @@ const UserModel = new User().getModelForClass(User);
 
 (async () => {
   const userStream = UserModel.watch();
-  userStream.on('data', data => {
-    console.log('user stream:', data);
+  userStream.on('change', change => {
+    console.log('user stream:', change);
   });
 
   // TODO strong-type creation param
-  const user = await UserModel.create({ name: 'Jim Doe' });
+  // * unexpectedly not picked up by change stream
+  const user = await UserModel.create({ name: 'Jake Doe' });
   console.log('created user:', user);
 
   // * close connection
