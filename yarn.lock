@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@typegoose/typegoose@^5.9.2":
+  version "5.9.2"
+  resolved "https://registry.yarnpkg.com/@typegoose/typegoose/-/typegoose-5.9.2.tgz#6ce1f8ab816151c44a1fbe51d51f559011231227"
+  integrity sha512-aNA03ZbHSwT9ft5WdzbIYOhqLPXunUMV6OVd7ak6zR7G1azm+YQqmlSF+u8W/WTPHn4YQnn1IqTGlndR6i74Cw==
+  dependencies:
+    reflect-metadata "^0.1.13"
+
 "@types/bson@*":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/bson/-/bson-4.0.0.tgz#9073772679d749116eb1dfca56f8eaac6d59cc7a"
@@ -169,10 +176,3 @@ sliced@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
-
-typegoose@^5.9.1:
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/typegoose/-/typegoose-5.9.1.tgz#58dbb14f35ecf96b22e7c744fa7a0f9731260f29"
-  integrity sha512-D+vMhNyZeKBZHrmJFZwOodl3T9W2NOXY+hbnW/f1n60oEL8+L15eryFc9C6fAKrlnkgpui+kdQnNXsLwx2MgCw==
-  dependencies:
-    reflect-metadata "^0.1.13"
