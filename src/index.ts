@@ -14,15 +14,16 @@ class User extends Typegoose {
 }
 
 const UserModel = new User().getModelForClass(User);
-// UserModel is a regular Mongoose Model with correct types
+// * UserModel is a regular Mongoose Model with correct types
 
 (async () => {
   const u = await UserModel.create({ name: 'Jane Doe' });
   console.log(u);
   const user = await UserModel.findOne();
 
-  console.log(user);
-  // prints { _id: 59218f686409d670a97e53e0, name: 'John Doe', __v: 0 }
+  // TODO strong-type creation param
+  const user = await UserModel.create({ name: 'Jim Doe' });
+  console.log('created user:', user);
 
   // * close connection
   mongoose.connection.close();
