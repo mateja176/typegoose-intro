@@ -11,7 +11,7 @@
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
   "license": "MIT",
   "dependencies": {
-    "@typegoose/typegoose": "^5.9.2",
+    "@typegoose/typegoose": "^6.0.1",
     "mongoose": "^5.7.1"
   },
   "devDependencies": {

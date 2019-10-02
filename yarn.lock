@@ -2,11 +2,12 @@
 # yarn lockfile v1
 
 
-"@typegoose/typegoose@^5.9.2":
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/@typegoose/typegoose/-/typegoose-5.9.2.tgz#6ce1f8ab816151c44a1fbe51d51f559011231227"
-  integrity sha512-aNA03ZbHSwT9ft5WdzbIYOhqLPXunUMV6OVd7ak6zR7G1azm+YQqmlSF+u8W/WTPHn4YQnn1IqTGlndR6i74Cw==
+"@typegoose/typegoose@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@typegoose/typegoose/-/typegoose-6.0.1.tgz#5620895caf00b6f765c2216155e1c7a9340919b6"
+  integrity sha512-7CwM1gyxemYmwOSzftJNA1u4jJgN+4DZrYktHHqUfxU1nXh94jQ0QbgF1YPdPzl2anQf+JUUfpn/LrjSBC+bgA==
   dependencies:
+    loglevel "^1.6.4"
     reflect-metadata "^0.1.13"
 
 "@types/bson@*":
@@ -942,6 +943,11 @@ lodash@^4.17.11:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+loglevel@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.4.tgz#f408f4f006db8354d0577dcf6d33485b3cb90d56"
+  integrity sha512-p0b6mOGKcGa+7nnmKbpzR6qloPbrgLcnio++E+14Vo/XffOGwZtRpUhr8dTH/x2oCMmEoIU0Zwm3ZauhvYD17g==
 
 lowercase-keys@^1.0.0:
   version "1.0.1"
