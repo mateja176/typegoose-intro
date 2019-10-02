@@ -1,4 +1,4 @@
-import { prop, Typegoose } from '@typegoose/typegoose';
+import { post, prop, Typegoose } from '@typegoose/typegoose';
 import * as mongoose from 'mongoose';
 
 mongoose
@@ -8,6 +8,9 @@ mongoose
   })
   .then(c => c);
 
+@post<User>('save', user => {
+  console.log('saved:', user);
+})
 class User extends Typegoose {
   @prop()
   name?: string;
@@ -16,12 +19,12 @@ class User extends Typegoose {
 const UserModel = new User().getModelForClass(User);
 // * UserModel is a regular Mongoose Model with correct types
 
-(async () => {
-  const userStream = UserModel.watch();
-  userStream.on('change', change => {
-    console.log('user stream:', change);
-  });
+const userStream = UserModel.watch();
+userStream.on('change', change => {
+  console.log('user stream:', change);
+});
 
+(async () => {
   // TODO strong-type creation param
   // * unexpectedly not picked up by change stream
   const user = await UserModel.create({ name: 'Jake Doe' });
