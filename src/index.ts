@@ -2,7 +2,7 @@ import { getModelForClass, post, prop } from '@typegoose/typegoose';
 import * as mongoose from 'mongoose';
 
 mongoose
-  .connect('mongodb://localhost:27017/typegoose', {
+  .connect('mongodb://localhost:27017/typegoose-intro', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -26,8 +26,7 @@ userStream.on('change', change => {
 (async () => {
   // TODO strong-type creation param
   // * unexpectedly not picked up by change stream
-  const user = await UserModel.create({ name: 'James Doe' });
-  console.log('created user:', user);
+  await UserModel.create({ name: 'James Doe' });
 
   userStream.close();
   // * close connection
